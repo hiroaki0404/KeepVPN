@@ -1,5 +1,5 @@
 # KeepVPN
-![KeepVPN icon](http://www.home.group.jp/hiroaki/KeepVPN/image/KeepVPN.tiff)
+![KeepVPN icon](http://www.home.group.jp/hiroaki/KeepVPN/image/KeepVPN.png)
 
 ## 概要
 KeepVPN は、VPNの自動接続、自動再接続を行うアプリケーションです。  
@@ -19,3 +19,5 @@ vpnc を除き、BSDライセンスに従うものとします。詳しくは、
 "ネットワーク"環境設定で作成したVPN設定を呼び出すプログラム(vpnc)は、  
 [仮想化雑記帳: [余談] MacOS X のVPN接続をコマンドラインから実行する](http://virtnote.blogspot.jp/2012/02/macos-x-vpn.html)
 に記載されているものです。
+  
+![KeepVPN address](http://www.home.group.jp/hiroaki/KeepVPN/image/mail.png)
