@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>English</string>
     <key>CFBundleExecutable</key>
-    <string>keepvpn.pl</string>
+    <string>startup</string>
     <key>CFBundleIdentifier</key>
     <string>jp.group.keepvpn</string>
     <key>CFBundleInfoDictionaryVersion</key>

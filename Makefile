@@ -3,8 +3,8 @@
 APPBASE=work/KeepVPN.app/Contents
 CODEDIR=$(APPBASE)/MacOS
 RESDIR=$(APPBASE)/Resources
-SRC=src/vpnc src/keepvpn.pl src/keepvpn.sh src/settings
-OBJ=$(CODEDIR)/vpnc $(CODEDIR)/keepvpn.pl $(CODEDIR)/keepvpn.sh $(CODEDIR)/settings
+SRC=src/vpnc src/keepvpn.pl src/keepvpn.sh src/settings src/startup
+OBJ=$(CODEDIR)/vpnc $(CODEDIR)/keepvpn.pl $(CODEDIR)/keepvpn.sh $(CODEDIR)/settings $(CODEDIR)/startup
 
 appdirs:
 	-mkdir -p $(CODEDIR)

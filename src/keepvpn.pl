@@ -73,7 +73,7 @@ system("./keepvpn.sh &");
 
 while(<Reader>) {
     sleep(5);
-    system("./vpnc connect $Config{'default.setting'}");
+    system("./keepvpn.sh -once");
     syslog('info', "Connect to $Config{'default.setting'}");
 }
 print Writer "n.cancel\n";

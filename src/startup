@@ -1,0 +1,13 @@
+#!/bin/sh
+# $Id$
+#
+cd `dirname "$0"`
+rc=`/bin/ps x|grep '[k]eepvpn.pl'`
+
+if [ "x" = "x$rc" ]; then
+    ./keepvpn.pl &
+else
+    ./settings
+fi
+
+
