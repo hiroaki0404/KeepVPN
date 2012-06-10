@@ -11,7 +11,7 @@
 <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
   {lang: 'ja'}
 </script>
-    <title>KeepVPN by hiroaki0404</title>
+    <title>KeepVPN マニュアル</title>
   </head>
 
   <body>
@@ -25,51 +25,43 @@
 }(document, 'script', 'facebook-jssdk'));</script>
     <header>
       <div class="container">
-        <h1>KeepVPN</h1>
-        <h2>KeepVPN is auto re-connect VPN scripts.</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/hiroaki0404/KeepVPN/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/hiroaki0404/KeepVPN/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/hiroaki0404/KeepVPN" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
+        <h1>KeepVPN マニュアル</h1>
       </div>
     </header>
 
     <div class="container">
       <section id="main_content">
-        <h1>KeepVPN</h1>
+        <h1>KeepVPN マニュアル</h1>
 
-<p><img src="./images/KeepVPN.png" alt="KeepVPN icon"></p>
 
-<h2>概要</h2>
+<h2>起動</h2>
 
-<p>KeepVPN は、VPNの自動接続、自動再接続を行うアプリケーションです。<br>
-VPNで繋いだ時にアクセスできるマシンと通信できるかをチェックし、通信できない場合、"ネットワーク"環境設定で作成したVPN設定を呼び出して接続します。
-また、定期的にVPN接続できているかを確認し、必要に応じて再接続します。</p>
+<p style="float:left;width:144px;"><img src="./images/KeepVPN.png" width="128px" hight="128px" alt="KeepVPN icon"></p>
+<p>KeepVPN をダブルクリックすると、起動します。設定ファイルが存在している場合、画面はでません。<br />
+設定ファイルが存在しない場合、あるいは、既に起動している状態でアイコンをダブルクリックした場合、設定画面が表示されます。
+</p><br clear="all" />
 
-<h2>必要なソフトウェア</h2>
+<h2>設定画面</h2>
 
-<p>perlのConfig-Simpleを使用しています。cpanコマンドでConfig-Simpleをインストールしてください。</p>
+<p style="float:left;width:268px;"><img src="./images/settings.png" width="252px" hight="135px" alt="KeepVPN settings"></p>
+<p>設定項目は３つです。VPNの設定は、あらかじめシステム環境設定から行っておきます。</p>
+<dl>
+<dt>接続確認サーバー</dt>
+<dd>VPNが繋がっているかどうかを判断するためのサーバーを指定します。ここで指定したサーバーに接続できない場合、VPNを接続するための処理を行います。VPN経由でないとアクセスできないサーバーを指定します。</dd>
+<dt>VPN設定名称</dt>
+<dd>"ネットワーク環境設定"で作成したVPN接続のサービス名称を指定します。サービス名称は半角英数字で付けておきましょう。</dd>
+<dt>確認間隔(秒)</dt>
+<dd>ネットワークの状態が変化すると接続確認サーバーにアクセスできるか確認しますが、その他に、定期的に接続できるかも確認します。その間隔を、ここで設定します。</dd>
+</dl>
 
-<h2>ライセンス</h2>
+<h2>設定ファイル</h2>
+<p>設定画面で設定した内容は、~/.keepvpn に保存されます。Windowsのiniファイル形式ですので、直接編集することも可能です。<br />
+設定ファイルが読み込まれるのは、起動時のみです。</p>
 
-<p>vpnc を除き、BSDライセンスに従うものとします。詳しくは、同梱の License.txt を参照してください。</p>
+<h2>停止方法</h2>
+<p>ありません。ターミナルから、keepvpn.shおよびkeepvpn.plをkillしてください。</p>
 
-<h2>ダウンロード</h2>
-
-<p><a href="./archive/KeepVPN-0.1.zip">KeepVPN-0.1.zip</a></p>
-
-<h2>使い方</h2>
-
-<p><a href="./manual.html">マニュアル</a></p>
-
-<h2>その他</h2>
-
-<p>"ネットワーク"環境設定で作成したVPN設定を呼び出すプログラム(vpnc)は、<br><a href="http://virtnote.blogspot.jp/2012/02/macos-x-vpn.html">仮想化雑記帳: [余談] MacOS X のVPN接続をコマンドラインから実行する</a>
-に記載されているものです。</p>
-
-<hr><p style="align:bot"><a href="../">Back to Hiroaki&apos;s Page</a>
+<hr><p style="align:bot"><a href="./">KeepVPN</a>
 <!-- AddClips Code START -->
 <script type="text/javascript">
 <!--
