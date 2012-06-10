@@ -1,5 +1,5 @@
 # KeepVPN
-![KeepVPN icon](http://www.home.group.jp/hiroaki/KeepVPN/image/KeepVPN.png)
+![KeepVPN icon](http://hiroaki0404.github.com/KeepVPN/images/KeepVPN.png)
 
 ## 概要
 KeepVPN は、VPNの自動接続、自動再接続を行うアプリケーションです。  
@@ -13,11 +13,12 @@ perlのConfig-Simpleを使用しています。cpanコマンドでConfig-Simple�
 vpnc を除き、BSDライセンスに従うものとします。詳しくは、同梱の License.txt を参照してください。
 
 ## ダウンロード
-[KeepVPN-0.1.zip](http://www.home.group.jp/hiroaki/archive/keepvpn/KeepVPN-0.1.zip)
+[KeepVPN-0.1.zip](http://hiroaki0404.github.com/KeepVPN/archive/KeepVPN-0.1.zip)
 
 ## その他
 "ネットワーク"環境設定で作成したVPN設定を呼び出すプログラム(vpnc)は、  
 [仮想化雑記帳: [余談] MacOS X のVPN接続をコマンドラインから実行する](http://virtnote.blogspot.jp/2012/02/macos-x-vpn.html)
 に記載されているものです。
-  
-![KeepVPN address](http://www.home.group.jp/hiroaki/KeepVPN/image/mail.png)
+
+---  
+![KeepVPN address](http://hiroaki0404.github.com/KeepVPN/images/mail.png)
