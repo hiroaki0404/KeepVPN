@@ -11,38 +11,53 @@ if [file exists $inifile] {
     set ini [::ini::open $inifile r]
     if [::ini::exists $ini default host] {
 	set inihost [::ini::value $ini default host]
+    } else {
+	set inihost ""
     }
     if [::ini::exists $ini default setting] {
 	set inisetting [::ini::value $ini default setting]
+    } else {
+	set inisetting ""
     }
     if [::ini::exists $ini default interval] {
 	set iniinterval [::ini::value $ini default interval]
+    } else {
+	set iniinterval 0
+    }
+    if [::ini::exists $ini default ipv6] {
+	set ipv6 [::ini::value $ini default ipv6]
+    } else {
+	set ipv6 0
     }
     ::ini::close $ini
 }
 
-proc save {inifile host setting interval} {
+proc save {inifile host setting interval ipv6} {
     set ini [::ini::open $inifile w]
     ::ini::set $ini default host $host
     ::ini::set $ini default setting $setting
     ::ini::set $ini default interval $interval
+    ::ini::set $ini default ipv6 $ipv6
     ::ini::commit $ini
     ::ini::close $ini
     exit
 }
 wm title . "KeepVPN 設定"
 label .lhost -text 接続確認サーバー
+label .lipv6 -text IPv6で確認
 label .lsetting -text VPN設定名称
 label .linterval -text 確認間隔(秒)
 entry .ehost -width 16
+checkbutton .cbipv6 -text はい -variable ipv6
 entry .esetting -width 16
 entry .einterval -width 4
-button .bSave -text 保存 -command {save $inifile [.ehost get] [.esetting get] [.einterval get]}
+button .bSave -text 保存 -command {save $inifile [.ehost get] [.esetting get] [.einterval get] $ipv6}
 button .bClose -text 閉じる -command exit
 .ehost insert 0 $inihost
 .esetting insert 0 $inisetting
 .einterval insert 0 $iniinterval
 grid .lhost .ehost -sticky w
+grid .lipv6 .cbipv6 -sticky w
 grid .lsetting .esetting -sticky w
 grid .linterval .einterval -sticky w
 grid .bSave .bClose
