@@ -2,12 +2,20 @@
 # $Id$
 #
 cd `dirname "$0"`
-rc=`/bin/ps x|grep '[k]eepvpn.pl'`
+rc=`/bin/ps x|/usr/bin/grep '[k]eepvpn.pl'`
 
 if [ "x" = "x$rc" ]; then
     ./keepvpn.pl &
 else
-    ./settings
+    pidpl=`/bin/echo $rc|/usr/bin/awk '{print $1;}'`
+    pidsh=`/bin/ps x|awk '/[k]eepvpn.sh/{print $1; }'`
+    if [ "-r" = "$1" ]; then
+	kill $pidpl
+	kill $pidsh
+	./keepvpn.pl &
+    else
+	./settings
+    fi
 fi
 
 

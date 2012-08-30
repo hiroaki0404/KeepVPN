@@ -51,7 +51,10 @@ entry .ehost -width 16
 checkbutton .cbipv6 -text はい -variable ipv6
 entry .esetting -width 16
 entry .einterval -width 4
-button .bSave -text 保存 -command {save $inifile [.ehost get] [.esetting get] [.einterval get] $ipv6}
+button .bSave -text 保存 -command {
+    save $inifile [.ehost get] [.esetting get] [.einterval get] $ipv6
+    exec ./startup -r
+}
 button .bClose -text 閉じる -command exit
 .ehost insert 0 $inihost
 .esetting insert 0 $inisetting
